@@ -26,7 +26,7 @@ class EmailVerified
      */
     public function handle(Verified $event)
     {
-        //
+        //认证成功提醒
         session()->flash('success', '邮箱验证成功 ^_^');
     }
 }

@@ -20,7 +20,7 @@ class UserFactory extends Factory
             'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png',
             'https://cdn.learnku.com/uploads/images/201710/14/1/NDnzMutoxX.png',
         ];
-
+U
         return [
             'name' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail,

@@ -13,6 +13,7 @@ class TopicObserver
     public function saving(Topic $topic)
     {
         if($topic->body) {
+            $topic->body = clean($topic->body, 'user_topic_body');
             $topic->excerpt = Str::limit($topic->body);
         }
     }

@@ -14,7 +14,7 @@ class AddNotificationCountToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('notification_count')->after('remember_token');
+            $table->integer('notification_count')->default(0)->after('remember_token');
         });
     }
 

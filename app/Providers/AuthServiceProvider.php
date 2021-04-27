@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Telescope\Telescope;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,8 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        Telescope::auth(function ($request) {
+            return \Auth::user()->hasRole('Founder');
+        });
     }
 }

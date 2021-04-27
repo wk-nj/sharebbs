@@ -16,6 +16,7 @@
         "mews/purifier": "~3.3",
         "overtrue/laravel-lang": "~4.0",
         "overtrue/pinyin": "~4.0",
+        "predis/predis": "~1.1",
         "summerblue/laravel-active": "8.*"
     },
     "require-dev": {
@@ -23,6 +24,7 @@
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
+        "laravel/telescope": "^4.4",
         "laravel/ui": "^3.0",
         "mockery/mockery": "^1.4.2",
         "nunomaduro/collision": "^5.0",
@@ -58,7 +60,9 @@
     },
     "extra": {
         "laravel": {
-            "dont-discover": []
+            "dont-discover": [
+                "laravel/telescope"
+            ]
         }
     },
     "config": {

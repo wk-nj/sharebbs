@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Topic;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class TopicsController extends Controller
 {

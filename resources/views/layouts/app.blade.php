@@ -9,8 +9,9 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'ShareBBS') - 分享社区</title>
-    <meta name="description" content="@yield('description', '分享社区')" />
+    <title>@yield('title', 'LaraBBS') - {{ setting('site_name', '分享社区') }}</title>
+    <meta name="description" content="@yield('description', setting('seo_description', '分享社区。'))" />
+    <meta name="keywords" content="@yield('keyword', setting('seo_keyword', 'ShareBBS,社区,论坛,分享论坛'))" />
 
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">

@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
+use App\Models\Link;
 use App\Models\Topic;
 use App\Models\User;
+use App\Observers\LinkObserver;
 use App\Observers\TopicObserver;
 use Illuminate\Support\ServiceProvider;
 
@@ -32,5 +34,6 @@ class AppServiceProvider extends ServiceProvider
 		\App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
         \Illuminate\Pagination\Paginator::useBootstrap();
         Topic::observe(TopicObserver::class);
+        Link::observe(LinkObserver::class);
 	}
 }
